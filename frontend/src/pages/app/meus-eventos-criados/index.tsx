@@ -51,7 +51,7 @@ export default function MeusEventosCriadosPage() {
             <section className="py-28 flex flex-col items-center">
                 <div className="max-w-screen-lg w-full mx-auto px-4 md:px-8">
                     <div className="max-w-md">
-                        <h1 className="text-gray-800 text-2xl font-extrabold sm:text-3xl">Todos os eventos </h1>
+                        <h1 className="text-gray-800 text-2xl font-extrabold sm:text-3xl">Seus eventos criados </h1>
                     </div>
                     <ul className="mt-12 divide-y space-y-3">
                         {events.length == 0 && (

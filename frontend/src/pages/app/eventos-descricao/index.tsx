@@ -49,13 +49,31 @@ export default function EventDescriptionPage() {
         getEvent()
     }, [id])
 
+    const background = () => {
+        if (event.nome_categoria == 'Educação') {
+            return '/img/bg-educacao.webp'
+        }
+        if (event.nome_categoria == 'Saúde') {
+            return '/img/bg-saude.png'
+        }
+        if (event.nome_categoria == 'Doações') {
+            return '/img/bg-doacoes.png'
+        }
+        if (event.nome_categoria == 'Inclusão Social') {
+            return '/img/bg-inclusao-social.webp'
+        }
+        if (event.nome_categoria == 'Sustentabilidade') {
+            return '/img/bg-sustentabilidade.png'
+        }
+    }
+
     return (
         <>
             {event && (
                 <div className="mx-auto h-auto flex flex-col items-center justify-center px-8 pt-[30px]">
                     <div className="flex flex-col w-full bg-white rounded shadow-lg">
-                        <div className="w-full h-64 bg-top bg-cover rounded-t"
-                            style={{ backgroundImage: 'url(https://www.si.com/.image/t_share/MTY4MTkyMjczODM4OTc0ODQ5/cfp-trophy-deitschjpg.jpg)' }}
+                        <div className="w-full h-64 bg-cover bg-center rounded-t"
+                            style={{ backgroundImage: `url(${background()})` }}
                         />
                         <div className="flex flex-col w-full md:flex-row">
                             <div className="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
